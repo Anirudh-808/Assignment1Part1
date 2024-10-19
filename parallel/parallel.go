@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"os"
 	//importing the bufio module(used ChatGPT for this)
 	//used for reading the file
@@ -23,9 +21,6 @@ func main() {
 	//Using Open and nor Readfile due to the bufio module
 	dat, _ := os.Open("./big.txt")
 
-	//set a counter
-	count := 0
-
 	//the Newscanner function creates a new scanner to scan the doc
 	//it defaults to reading line by line
 	c := make(chan string)
@@ -42,7 +37,5 @@ func main() {
 	}
 
 	wg.Wait()
-
-	fmt.Println(count)
 
 }
