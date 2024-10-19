@@ -4,8 +4,6 @@ import (
 	//importing the strings module(used ChatGPT for this)
 	//used to modify strings
 	"strings"
-
-	"fmt"
 )
 
 func IsVowel(r string) bool {
@@ -22,24 +20,26 @@ func IsVowel(r string) bool {
 	return false
 }
 
-func CheckifVowelParallel(a string) {
-	count := 0
+var Count int = 0
+
+func CheckifVowelParallel(a string) int {
 	for _, l := range a {
 		if IsVowel(string(l)) {
-			count++
+			Count++
 		}
 	}
+
+	return Count
 
 }
 
-func CheckifVowelSerial(a string) {
-	count := 0
+func CheckifVowelSerial(a string) int {
 	for _, l := range a {
 		if IsVowel(string(l)) {
-			count++
+			Count++
 		}
 	}
 
-	fmt.Println(count)
+	return Count
 
 }
