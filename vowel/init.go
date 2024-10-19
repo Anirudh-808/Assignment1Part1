@@ -4,6 +4,8 @@ import (
 	//importing the strings module(used ChatGPT for this)
 	//used to modify strings
 	"strings"
+
+	"fmt"
 )
 
 func IsVowel(r string) bool {
@@ -37,5 +39,7 @@ func CheckifVowelSerial(a string) {
 			count++
 		}
 	}
+
+	fmt.Println(count)
 
 }
